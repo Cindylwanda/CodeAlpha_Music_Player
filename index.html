@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎵 Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="music-player" id="musicPlayer">
+        <div class="album-art">
+            🎵
+            <div class="playing-indicator">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span style="margin-left:6px;">playing</span>
+            </div>
+        </div>
+
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Loading...</div>
+            <div class="song-artist" id="songArtist">Loading...</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="time-display">
+                <span id="currentTime">0:00</span>
+                <span id="totalDuration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" aria-label="Previous">⏮</button>
+            <button class="play-btn" id="playBtn" aria-label="Play / Pause">▶</button>
+            <button id="nextBtn" aria-label="Next">⏭</button>
+        </div>
+
+        <div class="volume-container">
+            <span class="icon">🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70" />
+            <span class="volume-value" id="volumeDisplay">70%</span>
+        </div>
+
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <h4>📋 Playlist</h4>
+                <span class="badge" id="playlistCount">0 tracks</span>
+            </div>
+            <ul class="playlist" id="playlist"></ul>
+        </div>
+
+        <div class="player-footer">
+            <label class="autoplay-toggle">
+                <span>🔁 Autoplay</span>
+                <input type="checkbox" id="autoplayToggle" />
+            </label>
+            <span class="autoplay-status" id="autoplayStatus">off</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js">
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
